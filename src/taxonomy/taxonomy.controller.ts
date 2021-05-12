@@ -8,8 +8,7 @@ import {
   Put,
   Query,
 } from '@nestjs/common';
-import { ApiBody, ApiOperation, ApiQuery, ApiTags } from '@nestjs/swagger';
-import { QueryList } from 'src/decorator/query-list.decorator';
+import { ApiOperation, ApiQuery, ApiTags } from '@nestjs/swagger';
 import { QueryListDto } from 'src/dto/query-list.dto';
 import {
   QueryListRes,
