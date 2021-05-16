@@ -49,7 +49,12 @@ export class TaxonomyService {
 
   async update(updateTaxonomyDto: UpdateTaxonomyDto): Promise<Taxonomy> {
     const { _id } = updateTaxonomyDto;
-    return await this.taxonomy.findByIdAndUpdate(_id, updateTaxonomyDto);
+    const taxonomy = await this.taxonomy.findById(_id);
+    for (const key in updateTaxonomyDto) {
+      taxonomy[key] = updateTaxonomyDto[key];
+    }
+    taxonomy.save();
+    return taxonomy;
   }
 
   async remove(_id: string): Promise<unknown> {

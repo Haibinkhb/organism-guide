@@ -6,7 +6,8 @@ import { TaxonomyModule } from './taxonomy/taxonomy.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost/organism_guide', {
+    MongooseModule.forRoot('mongodb://kuanghb:249875@localhost:27017', {
+      dbName: 'organism_guide',
       useFindAndModify: false,
       useCreateIndex: true,
       useNewUrlParser: true,
