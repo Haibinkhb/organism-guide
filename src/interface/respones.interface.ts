@@ -6,5 +6,5 @@ export interface ResponseInterface<T = unknown> {
 
 export interface QueryListRes<T> {
   data: T[];
-  total?: number;
+  total: number;
 }
